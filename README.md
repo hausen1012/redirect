@@ -13,7 +13,7 @@
 
 1. 在 URL 后直接输入目标网址即可实现跳转
 2. 格式：`/https://目标网站.com`
-3. 示例：访问 `/https://www.amjun.com` 将跳转到 amjun.com
+3. 示例：访问 `/https://www.amjun.com` 将跳转到 www.amjun.com
 
 ## 技术栈
 
