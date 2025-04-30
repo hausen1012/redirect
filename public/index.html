@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>重定向</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --primary-hover: #1d4ed8;
+      --text-primary: #1f2937;
+      --text-secondary: #4b5563;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f9fafb;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-secondary);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      color: var(--text-primary);
+    }
+
+    .container {
+      background-color: var(--bg-primary);
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      padding: 48px;
+      width: 90%;
+      max-width: 640px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), #60a5fa);
+      opacity: 0.8;
+    }
+
+    .container:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      color: var(--text-primary);
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 1.125rem;
+      line-height: 1.75;
+      margin-bottom: 32px;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    a:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 32px 24px;
+        width: 95%;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>重定向服务</h1>
+    <p>只需在 URL 后输入目标网址，即可快速跳转。例如：/https://www.amjun.com。</p>
+    <a href="/https://www.amjun.com">试试示例</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+    "name": "vercel-redirect",
+    "version": "1.0.0",
+    "main": "api/redirect.js",
+    "scripts": {
+      "dev": "vercel dev"
+    }
+  }
+  
